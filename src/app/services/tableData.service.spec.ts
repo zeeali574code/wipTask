@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { tableData } from './tableData.service';
 
-describe('ApiService', () => {
+describe('tableData', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
