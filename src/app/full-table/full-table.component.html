@@ -1,0 +1,60 @@
+<button [routerLink]="['/filterTable']">Go to Paginated Table</button>
+
+<div class="example-container mat-elevation-z8">
+
+
+  <mat-table [dataSource]="dataSource" matSort>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="mal_id">
+      <mat-header-cell *matHeaderCellDef > Mal ID</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.mal_id}} </mat-cell>
+    </ng-container>
+
+    <!-- Progress Column -->
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef> Title</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.title}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="airing">
+      <mat-header-cell *matHeaderCellDef> Airing</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.airing}} </mat-cell>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="type">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Type</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.type}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="episodes">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Episodes</mat-header-cell>
+      <mat-cell *matCellDef="let row" > {{row.episodes}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="score">
+      <mat-header-cell *matHeaderCellDef> Score</mat-header-cell>
+      <mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.score}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="start_date">
+      <mat-header-cell *matHeaderCellDef> Starting Date</mat-header-cell>
+      <mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.start_date}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="end_date">
+      <mat-header-cell *matHeaderCellDef> Ending Date</mat-header-cell>
+      <mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.end_date}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="members">
+      <mat-header-cell *matHeaderCellDef> Members</mat-header-cell>
+      <mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.members}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="rated">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Rated</mat-header-cell>
+      <mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.rated}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayColumns;">
+    </mat-row>
+  </mat-table>
+</div>
