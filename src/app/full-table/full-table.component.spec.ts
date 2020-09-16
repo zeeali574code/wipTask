@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FullTableComponent } from './full-table.component';
 
-describe('TableViewComponent', () => {
+describe('FullTableComponent', () => {
   let component: FullTableComponent;
   let fixture: ComponentFixture<FullTableComponent>;
 
