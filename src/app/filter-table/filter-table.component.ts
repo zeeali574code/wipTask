@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
-import { TableDataService } from '../services/table-data.service';
+import { tableData } from '../services/tableData.service';
+
 
 @Component({
   selector: 'app-filter-table',
@@ -15,7 +16,7 @@ export class FilterTableComponent implements OnInit {
   @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: false }) sort: MatSort;
 
-  constructor(private tableService: TableDataService) { }
+  constructor(private tableService: tableData ) { }
 
   ngOnInit() {
     this.tableService.getData().subscribe(res => {
