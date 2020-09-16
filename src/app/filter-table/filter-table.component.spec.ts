@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FilterTableComponent } from './filter-table.component';
 
-describe('DataTableComponent', () => {
+describe('FilterTableComponent', () => {
   let component: FilterTableComponent;
   let fixture: ComponentFixture<FilterTableComponent>;
 
